@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ahorcado:latest
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1  # Para que los print salgan directamente por consolta
+    volumes:
+      - .:/app
